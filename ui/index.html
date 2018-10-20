@@ -105,7 +105,7 @@ function updateChart(count) {
 	}
     p1name = " person 1 "
 	// updating legend text with  updated with y Value 
-	chart.options.data[0].legendText = p1name + yValue1 + "kWh";
+	chart.options.data[0].legendText = " Person 1 " + yValue1 + "kWh";
 	chart.options.data[1].legendText = " Person 2 " + yValue2 + "kWh"; 
 	chart.render();
     document.getElementById("p2use").innerHTML = yValue2 +"kwh"
