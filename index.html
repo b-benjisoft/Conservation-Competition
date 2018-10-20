@@ -10,13 +10,13 @@ var dataPoints2 = [];
 var chart = new CanvasJS.Chart("chartContainer", {
 	zoomEnabled: true,
 	title: {
-		text: "Share Value of Two Companies"
+		text: "Comparison of Power Usage over Time"
 	},
 	axisX: {
 		title: "chart updates every 3 secs"
 	},
 	axisY:{
-		prefix: "$",
+		prefix: "kWh",
 		includeZero: false
 	}, 
 	toolTip: {
@@ -32,7 +32,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	data: [{ 
 		type: "line",
 		xValueType: "dateTime",
-		yValueFormatString: "$####.00",
+		yValueFormatString: "kWh ####.00",
 		xValueFormatString: "hh:mm:ss TT",
 		showInLegend: true,
 		name: "Company A",
@@ -41,7 +41,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		{				
 			type: "line",
 			xValueType: "dateTime",
-			yValueFormatString: "$####.00",
+			yValueFormatString: "kWh ####.00",
 			showInLegend: true,
 			name: "Company B" ,
 			dataPoints: dataPoints2
@@ -94,8 +94,8 @@ function updateChart(count) {
 	}
 
 	// updating legend text with  updated with y Value 
-	chart.options.data[0].legendText = " Company A  kWh " + yValue1;
-	chart.options.data[1].legendText = " Company B  kWh " + yValue2; 
+	chart.options.data[0].legendText = " Person 1 " + yValue1 + "kWh";
+	chart.options.data[1].legendText = " Person 2 " + yValue2 + "kWh"; 
 	chart.render();
 }
 // generates first set of dataPoints 
