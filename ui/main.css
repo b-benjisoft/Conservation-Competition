@@ -58,7 +58,7 @@ body{
     margin-right: 5%;
 }
 
-#graph{
+#chartContainer{
     position: absolute;
     top: 30%;
     height: 50%;
